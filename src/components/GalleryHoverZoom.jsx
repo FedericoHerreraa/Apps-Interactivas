@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, ImageList, ImageListItem } from '@mui/material';
-import gourmet from '../Images/gourmet.jpeg';
-import gourmet1 from '../Images/gourmet1.jpeg';
-import gourmet2 from '../Images/gourmet2.jpeg';
+import gourmet from '../images/gourmet.jpeg';
+import gourmet1 from '../images/gourmet1.jpeg';
+import gourmet2 from '../images/gourmet2.jpeg';
 
 const images = [
   { img: gourmet, title: 'Gourmet' },
