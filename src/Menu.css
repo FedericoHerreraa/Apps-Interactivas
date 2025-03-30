@@ -1,0 +1,96 @@
+/* Contenedor principal */
+.menu-container {
+    padding: 40px;
+    font-family: 'Georgia', serif;
+    background-color:  #0c0b09;
+    color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Encabezados principales */
+.menu-container h1 {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.menu-container > p {
+    font-size: 1rem;
+  color: #cda45e; /* Dorado */
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+/* Sección de categorías */
+.menu-section {
+    margin-top: 50px;
+}
+
+.menu-section h2 {
+    font-size: 1.8rem;
+    color: #cda45e; /* Dorado */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Estilos para items del menú */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-item div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu-item h3 {
+    font-size: 1.2rem;
+    font-family: 'Georgia', serif;
+    color: #fff;
+    font-weight: normal;
+    margin: 0;
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin: 2px 0;
+}
+
+.menu-item .price {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.menu-item-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu-item .price {
+        margin-top: 10px;
+    }
+
+    .menu-item-img {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
