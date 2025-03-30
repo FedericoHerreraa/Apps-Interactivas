@@ -4,7 +4,7 @@ import MenuSection from './components/MenuSection';
 import './App.css';
 import GalleryHoverZoom from './components/GalleryHoverZoom';
 
-import heroBg from "./Images/hero-bg.jpg";
+import heroBg from "./images/hero-bg.jpg";
 
 function App() {
 
