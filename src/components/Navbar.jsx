@@ -32,7 +32,15 @@ export default function Navbar() {
     <Box>
       <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.62)', fontFamily: 'Playfair Display, Georgia, Times New Roman, Times, serif', marginTop: '15px' }}>
         <Toolbar variant="dense">
-          <Typography variant="h4" color="white" component="div" sx={{ fontFamily: 'inherit' }}>
+          <Typography
+            variant="h4"
+            color="white"
+            component="div"
+            sx={{
+              fontFamily: 'inherit',
+              fontSize: { xs: '1.4rem', sm: '2.125rem' } 
+            }}
+          >
             L'Atelier Gourmet
           </Typography>
           <IconButton
@@ -61,7 +69,7 @@ export default function Navbar() {
           },
         }}
       >
-        <h1 style={{ color: 'white', paddingLeft: 20, paddingTop: 20, fontSize: '30px' }}>L'Atelier Gourmet</h1>
+        <h1 style={{ color: 'white', paddingLeft: 20, paddingTop: 20, fontSize: '20px' }}>L'Atelier Gourmet</h1>
         <List sx={{ padding: 2 }}>
           <ListItem
             button

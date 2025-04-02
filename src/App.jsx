@@ -32,9 +32,6 @@ function App() {
           <h1>Bienvenidos a <span className="highlight">L'Atelier Gourmet</span></h1>
           <p>Realizando comida especial hace 18 años!</p>
           <button onClick={() => handleNavigation('menuSection')} className="menu-button">NUESTRO MENÚ</button>
-          <button className="play-button">
-            <span>&#9658;</span>
-          </button>
         </div>
       </div>
 
