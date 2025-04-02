@@ -1,12 +1,12 @@
-import bruschetta from '../Images/bruschetta.jpeg';
-import caesar from '../Images/caesar.jpeg';
-import caprese from '../Images/caprese.jpeg';
-import carne from '../Images/carne.jpeg';
-import carpaccio from '../Images/carpaccio.jpg';
-import gourmet from '../Images/gourmet.jpeg';
-import gourmet1 from '../Images/gourmet1.jpeg';
-import gourmet2 from '../Images/gourmet2.jpeg';
-import muzzarelitas from '../Images/muzzarelitas.jpeg';
+import bruschetta from '../images/bruschetta.jpeg';
+import caesar from '../images/caesar.jpeg';
+import caprese from '../images/caprese.jpeg';
+import carne from '../images/carne.jpeg';
+import carpaccio from '../images/carpaccio.jpg';
+import gourmet from '../images/gourmet.jpeg';
+import gourmet1 from '../images/gourmet1.jpeg';
+import gourmet2 from '../images/gourmet2.jpeg';
+import muzzarelitas from '../images/muzzarelitas.jpeg';
 
 export const menuData = [
   {
