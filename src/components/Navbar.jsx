@@ -35,10 +35,10 @@ export default function Navbar() {
           <Typography variant="h4" color="white" component="div" sx={{ fontFamily: 'inherit' }}>
             L'Atelier Gourmet
           </Typography>
-          <IconButton 
-            edge="end" 
-            color="inherit" 
-            aria-label="menu" 
+          <IconButton
+            edge="end"
+            color="inherit"
+            aria-label="menu"
             sx={{ ml: 'auto' }}
             onClick={toggleDrawer(true)}
           >
@@ -46,48 +46,49 @@ export default function Navbar() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      
-        <Drawer
-            anchor="right"
-            open={open}
-            onClose={toggleDrawer(false)}
-            PaperProps={{
-                sx: {
-                backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                width: 280,
-                transition: 'transform 0.3s ease-in-out',
-                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.5)',
-                backdropFilter: 'blur(10px)',
-                },
+
+      <Drawer
+        anchor="right"
+        open={open}
+        onClose={toggleDrawer(false)}
+        PaperProps={{
+          sx: {
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            width: 280,
+            transition: 'transform 0.3s ease-in-out',
+            boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.5)',
+            backdropFilter: 'blur(10px)',
+          },
+        }}
+      >
+        <h1 style={{ color: 'white', paddingLeft: 20, paddingTop: 20, fontSize: '30px' }}>L'Atelier Gourmet</h1>
+        <List sx={{ padding: 2 }}>
+          <ListItem
+            button
+            onClick={() => handleNavigation('menuSection')}
+            sx={{
+              backgroundColor: '#444',
+              borderRadius: '8px',
+              '&:hover': { backgroundColor: '#666' },
             }}
-            >
-            <h1 style={{ color: 'white', paddingLeft: 20, paddingTop: 20, fontSize: '30px' }}>L'Atelier Gourmet</h1>
-            <List sx={{ padding: 2 }}>
-                <ListItem
-                    button
-                    onClick={() => handleNavigation('home')}
-                    sx={{
-                        backgroundColor: '#444',
-                        marginBottom: 1,
-                        borderRadius: '8px',
-                        '&:hover': { backgroundColor: '#666' },
-                }}
-                >
-                    <ListItemText primary="Home" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
-                </ListItem>
-                <ListItem
-                    button
-                    onClick={() => handleNavigation('menuSection')}
-                    sx={{
-                        backgroundColor: '#444',
-                        borderRadius: '8px',
-                        '&:hover': { backgroundColor: '#666' },
-                    }}
-                >
-                    <ListItemText primary="Menu" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
-                </ListItem>
-            </List>
-        </Drawer>
+            style={{ marginBottom: 15 }}
+          >
+            <ListItemText primary="Menu" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
+          </ListItem>
+          <ListItem
+            button
+            onClick={() => handleNavigation('images')}
+            sx={{
+              backgroundColor: '#444',
+              marginBottom: 1,
+              borderRadius: '8px',
+              '&:hover': { backgroundColor: '#666' },
+            }}
+          >
+            <ListItemText primary="Conocenos" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
+          </ListItem>
+        </List>
+      </Drawer>
     </Box>
   );
 }

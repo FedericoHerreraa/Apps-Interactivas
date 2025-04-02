@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import MenuSection from './components/MenuSection';
+import MenuSection from './components/MenuSection/MenuSection';
 import './App.css';
 import GalleryHoverZoom from './components/GalleryHoverZoom';
 
