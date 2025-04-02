@@ -46,6 +46,7 @@
 }
 
 .menu-item div {
+    text-align: left;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

@@ -18,7 +18,7 @@ function MenuSection() {
                   {subcategory.items.map((item, i) => (
                     <div key={i} className="menu-item">
                       <div>
-                        <div style={{ marginBottom: '10px' }}>
+                        <div style={{ marginBottom: '10px', textAlign: 'start' }}>
                           <h3>{item.name}</h3>
                           <p>{item.description}</p>
                         </div>
@@ -36,7 +36,7 @@ function MenuSection() {
             section.items.map((item, i) => (
               <div key={i} className="menu-item">
                 <div>
-                  <div style={{ marginBottom: '10px' }}>
+                  <div style={{ marginBottom: '10px', textAlign: 'start' }}>
                     <h3>{item.name}</h3>
                     <p>{item.description}</p>
                   </div>
