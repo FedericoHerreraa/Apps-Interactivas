@@ -14,9 +14,10 @@ import quinoa from '../images/quinoa.png'
 import napolitana from '../images/napolitana.png'
 import polloParrilla from '../images/polloParrilla.png'
 import salmon from '../images/salmon.png'
-import gourmet from '../images/gourmet.jpeg';
-import gourmet1 from '../images/gourmet1.jpeg';
-import gourmet2 from '../images/gourmet2.jpeg';
+import ricota from '../images/ricota.png'
+import cocaCola from '../images/coca-cola.png'
+import malbec from '../images/malbec.png'
+import flan from '../images/flan.png'
 import muzzarelitas from '../images/muzzarelitas.jpeg';
 
 export const menuData = [
@@ -70,25 +71,25 @@ export const menuData = [
   {
     category: "Pastas",
     items: [
-      { name: "Ravioles de Ricotta", description: "Con salsa fileto", ingredientes: "Ricotta, harina, huevo, tomate", alergenos: "Gluten, lácteos, huevo", price: "$1600", img: gourmet }
+      { name: "Ravioles de Ricotta", description: "Con salsa fileto", ingredientes: "Ricotta, harina, huevo, tomate", alergenos: "Gluten, lácteos, huevo", price: "$1600", img: ricota }
     ]
   },
   {
     category: "Bebidas",
     items: [
-      { name: "Coca-Cola", description: "500ml", ingredientes: "Agua carbonatada, azúcar", alergenos: "Ninguno", price: "$950", img: gourmet }
+      { name: "Coca-Cola", description: "500ml", ingredientes: "Agua carbonatada, azúcar", alergenos: "Ninguno", price: "$950", img: cocaCola }
     ]
   },
   {
     category: "Bebidas Alcohólicas",
     items: [
-      { name: "Vino Malbec", description: "Cosecha 2020", ingredientes: "Uvas Malbec", alergenos: "Sulfitos", price: "$3000", img: gourmet1 }
+      { name: "Vino Malbec", description: "Cosecha 2020", ingredientes: "Uvas Malbec", alergenos: "Sulfitos", price: "$3000", img: malbec }
     ]
   },
   {
     category: "Postres",
     items: [
-      { name: "Flan Casero", description: "Con dulce de leche o crema", ingredientes: "Huevos, leche, azúcar", alergenos: "Huevo, lácteos", price: "$700", img: gourmet2 }
+      { name: "Flan Casero", description: "Con dulce de leche o crema", ingredientes: "Huevos, leche, azúcar", alergenos: "Huevo, lácteos", price: "$700", img: flan }
     ]
   }
 ];
