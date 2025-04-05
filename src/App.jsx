@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import MenuSection from './components/MenuSection/MenuSection';
 import './App.css';
 import GalleryHoverZoom from './components/GalleryHoverZoom';
-
+import Footer from './components/Footer';
 import heroBg from "./images/hero-bg.jpg";
 
 function App() {
@@ -37,9 +37,8 @@ function App() {
 
       <MenuSection />
       <GalleryHoverZoom />
-      <footer>
-        Copyright-2025-LAtelierGourmet
-      </footer>
+      <Footer/>
+      
     </div>
   );
 }

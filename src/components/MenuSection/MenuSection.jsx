@@ -1,12 +1,19 @@
-import React from 'react';
-import './Menu.css'; 
+import React, { useState } from 'react';
+import './Menu.css';
 import { menuData } from '../../data/data';
 
 function MenuSection() {
+  const [selectedImg, setSelectedImg] = useState(null);
+
+  const handleClickOutside = () => {
+    setSelectedImg(null);
+  };
+
   return (
-    <div id='menuSection' className="menu-container">
+    <div id="menuSection" className="menu-container">
       <h1>Menú</h1>
       <p>Descubre nuestras deliciosas opciones</p>
+
       {menuData.map((section, index) => (
         <div key={index} className="menu-section">
           <h2>{section.category}</h2>
@@ -26,7 +33,12 @@ function MenuSection() {
                         <p><strong>Alérgenos:</strong> {item.alergenos}</p>
                         <span className="price">{item.price}</span>
                       </div>
-                      <img src={item.img} alt={item.name} className="menu-item-img" />
+                      <img
+                        src={item.img}
+                        alt={item.name}
+                        className="menu-item-img"
+                        onClick={() => setSelectedImg(item.img)}
+                      />
                     </div>
                   ))}
                 </div>
@@ -44,12 +56,24 @@ function MenuSection() {
                   <p><strong>Alérgenos:</strong> {item.alergenos}</p>
                   <span className="price">{item.price}</span>
                 </div>
-                <img src={item.img} alt={item.name} className="menu-item-img" />
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  className="menu-item-img"
+                  onClick={() => setSelectedImg(item.img)}
+                />
               </div>
             ))
           )}
         </div>
       ))}
+
+      
+      {selectedImg && (
+        <div className="image-overlay" onClick={handleClickOutside}>
+          <img src={selectedImg} alt="ampliada" />
+        </div>
+      )}
     </div>
   );
 }
