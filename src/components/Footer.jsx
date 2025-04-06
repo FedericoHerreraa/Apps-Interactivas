@@ -35,10 +35,9 @@ function Footer() {
           alignItems={{ xs: 'center', md: 'flex-start' }}
           textAlign={{ xs: 'center', md: 'left' }}
         >
-          {/* Location */}
           <Grid item xs={12} md={4}>
             <Typography variant="h6" gutterBottom sx={{ color: '#cda45e' }}>
-              Location
+              Ubicación
             </Typography>
             <Box
               display="flex"

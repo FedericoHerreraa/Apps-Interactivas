@@ -53,7 +53,8 @@
 
 .menu-button {
   background-color: transparent;
-  color:#cda45e;
+  color: black;
+  background-color: #b7a078;
   border: 2px solid #cda45e;
   padding: 10px 30px;
   font-size: 1rem;
