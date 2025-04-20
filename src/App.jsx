@@ -5,7 +5,7 @@ import './App.css';
 import GalleryHoverZoom from './components/GalleryHoverZoom';
 import Footer from './components/Footer';
 import heroBg from "./images/hero-bg.jpg";
-
+import IntroOverlay from './components/IntroOverlay';
 function App() {
 
   const handleNavigation = (section) => {
@@ -17,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+      <IntroOverlay />
       <div
         className="hero-section"
         style={{ 

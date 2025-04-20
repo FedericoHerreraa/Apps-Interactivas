@@ -19,6 +19,27 @@ import cocaCola from '../images/coca-cola.png'
 import malbec from '../images/malbec.png'
 import flan from '../images/flan.png'
 import muzzarelitas from '../images/muzzarelitas.jpeg';
+import tiramisu from '../images/tiramisu.jpeg';
+import budin from '../images/budin.jpeg';  
+import helado from '../images/helado.jpeg';
+import cheesecake from '../images/cheesecake.jpeg';
+import tartafruta from '../images/tartafruta.jpeg';
+import delacasa from '../images/delacasa.jpeg';
+import cerveza from '../images/cerveza.jpeg';
+import champagne from '../images/champagne.jpeg';
+import sprite from '../images/sprite.jpeg';
+import aquarius from '../images/aquarius.jpeg';
+import agua from '../images/agua.jpeg';
+import rabas from '../images/rabas.jpeg';
+import trucha from '../images/trucha.jpeg';
+import ñoquis from '../images/ñoquis.jpeg';
+import entraña from '../images/entraña.jpeg';
+import asado from '../images/asado.jpeg';
+import suprema from '../images/suprema.jpeg';
+import fideos from '../images/fideos.jpeg';
+import bife from '../images/bife.jpeg';
+import lasagna from '../images/lasagna.jpeg';
+
 
 export const menuData = [
   {
@@ -51,19 +72,27 @@ export const menuData = [
       {
         name: "Carnes Rojas",
         items: [
-          { name: "Milanesa Napolitana", description: "Con papas fritas", ingredientes: "Carne vacuna, pan rallado, mozzarella, tomate, papas", alergenos: "Gluten, lácteos, huevo", price: "$1800", img: napolitana }
+          { name: "Milanesa Napolitana", description: "Con papas fritas", ingredientes: "Carne vacuna, pan rallado, mozzarella, tomate, papas", alergenos: "Gluten, lácteos, huevo", price: "$1800", img: napolitana },
+          { name: "Bife de Chorizo", description: "A la parrilla con guarnición", ingredientes: "Bife de chorizo, ensalada", alergenos: "Ninguno", price: "$2500", img: bife },
+          { name: "Entraña", description: "Con salsa BBQ y guarnición", ingredientes: "Costillas, salsa BBQ, ensalada", alergenos: "Ninguno", price: "$2300", img: entraña },
+          { name: "Asado", description: "Con papas fritas o Pure", ingredientes: "Carne vacuna", alergenos: "Ninguno", price: "$2300", img: asado },
+        
         ]
       },
       {
         name: "Carnes Blancas",
         items: [
-          { name: "Pollo a la Parrilla", description: "Con ensalada mixta", ingredientes: "Pollo, lechuga, tomate, cebolla", alergenos: "Ninguno", price: "$1700", img: polloParrilla }
+          { name: "Pollo a la Parrilla", description: "Con ensalada mixta", ingredientes: "Pollo, lechuga, tomate, cebolla", alergenos: "Ninguno", price: "$1700", img: polloParrilla },
+          { name: "Suprema de Pollo ", description: "Con verduras grill ", ingredientes: "Pollo, zanahoria, espinaca, papa", alergenos: "Ninguno", price: "$1400", img: suprema }
+        
         ]
       },
       {
         name: "Pescado",
         items: [
-          { name: "Salmón a la Plancha", description: "Con verduras salteadas", ingredientes: "Salmón, pimientos, cebolla, zanahoria", alergenos: "Pescado", price: "$2000", img: salmon }
+          { name: "Salmón a la Plancha", description: "Con verduras salteadas", ingredientes: "Salmón, pimientos, cebolla, zanahoria", alergenos: "Pescado", price: "$2000", img: salmon },
+          { name: "Rabas", description: "Rabas fritas ", ingredientes: "Calamar, pan rallado, harina, huevo", alergenos: "Pescado", price: "$2000", img: rabas },
+          { name: "Trucha", description: "Con verduras y crema", ingredientes: "Trucha, espinacas, crema", alergenos: "Pescado", price: "$2000", img: trucha }
         ]
       }
     ]
@@ -71,25 +100,40 @@ export const menuData = [
   {
     category: "Pastas",
     items: [
-      { name: "Ravioles de Ricotta", description: "Con salsa fileto", ingredientes: "Ricotta, harina, huevo, tomate", alergenos: "Gluten, lácteos, huevo", price: "$1600", img: ricota }
+      { name: "Ravioles de Ricotta", description: "Con salsa fileto", ingredientes: "Ricotta, harina, huevo, tomate", alergenos: "Gluten, lácteos, huevo", price: "$1600", img: ricota },
+      { name: "Fideos con Salsa Bolognesa", description: "Espaguetis con carne molida", ingredientes: "Espaguetis, carne molida, tomate", alergenos: "Gluten", price: "$1400", img: fideos },
+      { name: "Ñoquis soufle", description: "Con salsa de albahaca y nueces", ingredientes: "Papa, albahaca, nueces, aceite de oliva", alergenos: "Nueces, gluten", price: "$1500", img: ñoquis },
+      { name: "Lasaña de Carne", description: "Capas de pasta con verduras,carne y bechamel", ingredientes: "Pasta,Carne, verduras, bechamel", alergenos: "Gluten, lácteos", price: "$1700", img: lasagna },
     ]
   },
   {
     category: "Bebidas",
     items: [
-      { name: "Coca-Cola", description: "500ml", ingredientes: "Agua carbonatada, azúcar", alergenos: "Ninguno", price: "$950", img: cocaCola }
+      { name: "Agua Mineral", description: "500ml", ingredientes: "Agua", alergenos: "Ninguno", price: "$950", img: agua }, 
+      { name: "Coca-Cola", description: "500ml", ingredientes: "Agua carbonatada, azúcar", alergenos: "Ninguno", price: "$950", img: cocaCola }, 
+      { name: "Sprite", description: "500ml", ingredientes: "Agua carbonatada, azúcar", alergenos: "Ninguno", price: "$950", img: sprite }, 
+      { name: "Jugo Aquarius", description: "500ml", ingredientes: "Agua, colorantes, azúcar, conservantes", alergenos: "Ninguno", price: "$950", img: aquarius }, 
+
     ]
   },
   {
     category: "Bebidas Alcohólicas",
     items: [
-      { name: "Vino Malbec", description: "Cosecha 2020", ingredientes: "Uvas Malbec", alergenos: "Sulfitos", price: "$3000", img: malbec }
+      { name: "Vino Malbec", description: "Cosecha 2020", ingredientes: "Uvas Malbec", alergenos: "Sulfitos", price: "$3000", img: malbec },
+      { name: "Vino Atelier", description: "Cosecha 1990", ingredientes: "Uvas ", alergenos: "Sulfitos", price: "$1800", img: delacasa },
+      { name: "Cerveza Artesanal", description: "500ml", ingredientes: "Agua, malta, lúpulo, levadura", alergenos: "Gluten", price: "$1200", img: cerveza },
+      { name: "Champagne", description: "Botella 750ml", ingredientes: "Uvas", alergenos: "Sulfitos", price: "$5000", img: champagne },
     ]
   },
   {
     category: "Postres",
     items: [
-      { name: "Flan Casero", description: "Con dulce de leche o crema", ingredientes: "Huevos, leche, azúcar", alergenos: "Huevo, lácteos", price: "$700", img: flan }
+      { name: "Flan", description: "Flan casero con dulce de leche o crema ", ingredientes: "Huevo, azucar, vainilla", alergenos: "Huevo", price: "$950", img: flan},
+      { name: "Budín de Pan", description: "Budín de pan con dulce de leche", ingredientes: "Pan, leche, azúcar, huevo, dulce de leche", alergenos: "Gluten, lácteos, huevo", price: "$800", img: budin },
+      { name: "Helado Artesanal", description: "Variedad de sabores", ingredientes: "Leche, azúcar, saborizantes", alergenos: "Lácteos", price: "$1200", img: helado },
+      { name: "Tarta de Frutas", description: "Base de masa con crema y frutas frescas", ingredientes: "Masa, crema, frutas", alergenos: "Gluten, lácteos", price: "$1500", img: tartafruta },
+      { name: "Tiramisu", description: "Postre italiano con café y mascarpone", ingredientes: "Café, mascarpone, cacao", alergenos: "Gluten, lácteos, huevo", price: "$1800", img: tiramisu },
+      { name: "Cheesecake", description: "Tarta de queso con base de galleta", ingredientes: "Queso crema, galletas, mantequilla", alergenos: "Gluten, lácteos", price: "$1700", img: cheesecake},
     ]
   }
 ];

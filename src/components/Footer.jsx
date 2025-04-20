@@ -96,6 +96,7 @@ function Footer() {
             variant="body2"
             color="gray"
             align="center"
+            fontFamily={"'Georgia', serif"}
             sx={{ fontSize: { xs: '12px', sm: '14px' } }}
           >
             © {new Date().getFullYear()} LAtelierGourmet — Todos los derechos reservados

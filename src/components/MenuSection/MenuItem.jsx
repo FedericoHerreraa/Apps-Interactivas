@@ -9,7 +9,7 @@ export const MenuItem = ({ section, setSelectedImg }) => {
             <div className="subcategories" style={{ textAlign: 'left' }}>
               {section.subcategories.map((subcategory, subIndex) => (
                 <div key={subIndex} className="menu-subcategory">
-                  <h3 style={{ fontSize: '32px' }}>{subcategory.name}</h3>
+                  <h3 >{subcategory.name}</h3>
                   {subcategory.items.map((item, i) => (
                     <div key={i} className="menu-item">
                       <div>

@@ -13,12 +13,21 @@ const images = [
 const GalleryHoverZoom = () => {
   return (
     <div id='images'>
-      <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%', overflow: 'hidden' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          width: '100%',
+          overflow: 'hidden',
+          py: 6,
+          backgroundColor: '#0c0b09', 
+        }}
+      >
         <ImageList
           sx={{
             display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
-            gap: 10,
+            gap: 6,
             m: 0,
             overflow: 'hidden',
           }}
@@ -31,11 +40,14 @@ const GalleryHoverZoom = () => {
                 alt={item.title}
                 sx={{
                   width: '100%',
-                  maxWidth: { xs: '100%', md: 450 },
+                  maxWidth: { xs: '100%', md: 600 },
                   height: 'auto',
-                  borderRadius: 2,
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.1)' },
+                  borderRadius: 3,
+                  transition: 'transform 0.4s ease, box-shadow 0.4s ease',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+                  },
                 }}
               />
             </ImageListItem>

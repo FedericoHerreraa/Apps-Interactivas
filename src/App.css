@@ -54,8 +54,8 @@
 .menu-button {
   background-color: transparent;
   color: black;
-  background-color: #b7a078;
-  border: 2px solid #cda45e;
+  background-color: #cda45e;
+  border: 2px solid #c09751;
   padding: 10px 30px;
   font-size: 1rem;
   cursor: pointer;
@@ -65,7 +65,7 @@
 }
 
 .menu-button:hover {
-  background-color: #cda45e;
+  background-color: #ceaf79;
   color: black;
 }
 
