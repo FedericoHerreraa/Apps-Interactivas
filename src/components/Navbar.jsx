@@ -75,8 +75,9 @@ export default function Navbar() {
             button
             onClick={() => handleNavigation('menuSection')}
             sx={{
-              backgroundColor: '#444',
+              backgroundColor: '#595959',
               borderRadius: '8px',
+              border: `1px solid #9e9e9e`,
               '&:hover': { backgroundColor: '#666' },
             }}
             style={{ marginBottom: 15 }}
@@ -87,9 +88,10 @@ export default function Navbar() {
             button
             onClick={() => handleNavigation('images')}
             sx={{
-              backgroundColor: '#444',
+              backgroundColor: '#595959',
               marginBottom: 1,
               borderRadius: '8px',
+              border: `1px solid #9e9e9e`,
               '&:hover': { backgroundColor: '#666' },
             }}
           >

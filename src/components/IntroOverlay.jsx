@@ -6,22 +6,25 @@ const IntroOverlay = () => {
   const [text, setText] = useState('');
   const fullText = "L'Atelier Gourmet";
 
-  // Efecto escritura
   useEffect(() => {
     let i = 0;
     const typingInterval = setInterval(() => {
       if (i < fullText.length) {
-        setText((prev) => prev + fullText.charAt(i));
+        const nextChar = fullText.charAt(i);
+        setText((prev) => {
+          const updated = prev + nextChar;
+          console.log("Typing:", updated); // Ver el progreso
+          return updated;
+        });
         i++;
       } else {
         clearInterval(typingInterval);
       }
-    }, 100); // Velocidad de tipeo
+    }, 100);
 
     return () => clearInterval(typingInterval);
-  }, []);
+  }, [fullText]);
 
-  // Ocultar después de 3 segundos
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(false);
@@ -53,7 +56,7 @@ const IntroOverlay = () => {
             fontFamily: "'Playfair Display', Georgia, serif",
             textAlign: 'center',
             letterSpacing: '0.04em',
-            whiteSpace: 'nowrap', // <-- mejor para nombres de marca
+            whiteSpace: 'nowrap', 
             userSelect: 'none',
         }}
         >

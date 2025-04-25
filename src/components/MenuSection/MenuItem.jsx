@@ -1,5 +1,5 @@
 
-
+import { Link } from "react-router-dom"
 
 export const MenuItem = ({ section, setSelectedImg }) => {
     return (
@@ -11,7 +11,7 @@ export const MenuItem = ({ section, setSelectedImg }) => {
                 <div key={subIndex} className="menu-subcategory">
                   <h3 >{subcategory.name}</h3>
                   {subcategory.items.map((item, i) => (
-                    <div key={i} className="menu-item">
+                    <Link to={`/productDetail/${item.id}`} key={i} className="menu-item">
                       <div>
                         <div style={{ marginBottom: '10px', textAlign: 'start' }}>
                           <h3>{item.name}</h3>
@@ -27,14 +27,14 @@ export const MenuItem = ({ section, setSelectedImg }) => {
                         className="menu-item-img"
                         onClick={() => setSelectedImg(item.img)}
                       />
-                    </div>
+                    </Link>
                   ))}
                 </div>
               ))}
             </div>
           ) : (
             section.items.map((item, i) => (
-              <div key={i} className="menu-item">
+              <Link to={`/productDetail/${item.id}`}  key={i} className="menu-item">
                 <div>
                   <div style={{ marginBottom: '10px', textAlign: 'start' }}>
                     <h3>{item.name}</h3>
@@ -50,7 +50,7 @@ export const MenuItem = ({ section, setSelectedImg }) => {
                   className="menu-item-img"
                   onClick={() => setSelectedImg(item.img)}
                 />
-              </div>
+              </Link>
             ))
           )}
         </div>

@@ -13,7 +13,6 @@
   overflow: hidden;
 }
 
-/* Agrega un overlay oscuro con opacidad */
 .hero-section::before {
   content: '';
   position: absolute;
@@ -21,11 +20,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Ajusta el valor de 0.5 para más o menos opacidad */
+  background-color: rgba(0, 0, 0, 0.5); 
   z-index: 0;
 }
 
-/* Mantiene el texto por encima del overlay */
 .hero-text {
   position: absolute;
   top: 50%;
@@ -43,7 +41,7 @@
 }
 
 .hero-text .highlight {
-  color: #cda45e; /* Dorado */
+  color: #cda45e; 
 }
 
 .hero-text p {
@@ -88,7 +86,6 @@
   color: black;
 }
 
-/* Footer */
 
 
 /* RESPONSIVE DESIGN */
