@@ -13,8 +13,10 @@ const images = [
 const GalleryHoverZoom = () => {
   return (
     <div style={{ marginTop: 50 }}>
-      <h1 style={{ color: 'white', alignItems: 'start', fontFamily: 'Georgia' }}>Conoce nuestro espacio</h1>
-      <p style={{ color: '#cda45e' }}>Un rincón donde el sabor y la elegancia se encuentran.</p>
+      <div style={{ marginLeft: 10, marginRight: 10}}>
+        <h1 style={{ color: 'white', alignItems: 'start', fontFamily: 'Georgia', fontSize: 30 }}>Conoce nuestro espacio</h1>
+        <p style={{ color: '#cda45e' }}>Un rincón donde el sabor y la elegancia se encuentran.</p>
+      </div>
       <div id='images'>
         <Box
           sx={{

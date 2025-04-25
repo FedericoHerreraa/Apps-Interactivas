@@ -50,7 +50,6 @@ export default function ProductDetail() {
             height: '100vh',
             overflow: 'hidden'
         }}>
-            {/* Fondo con opacidad */}
             <div style={{
                 backgroundImage: `url(${heroBg})`,
                 backgroundSize: 'cover',
@@ -64,7 +63,6 @@ export default function ProductDetail() {
                 zIndex: 0
             }}></div>
 
-            {/* Botón de volver */}
             <div
                 onClick={() => navigate(-1)}
                 style={{
@@ -81,7 +79,6 @@ export default function ProductDetail() {
                 ← Volver al menú
             </div>
 
-            {/* Card */}
             <div style={{
                 backgroundColor: '#1a1a1a',
                 borderRadius: 20,
@@ -94,7 +91,6 @@ export default function ProductDetail() {
                 display: 'flex',
                 flexDirection: 'column'
             }}>
-                {/* Imagen del producto */}
                 <div style={{ height: '35%' }}>
                     <img
                         src={producto.img}
@@ -107,7 +103,6 @@ export default function ProductDetail() {
                     />
                 </div>
 
-                {/* Contenido */}
                 <div style={{ padding: 24, color: 'white', overflowY: 'auto' }}>
                     <h1 style={{ fontSize: 28, marginBottom: 10 }}>{producto.name}</h1>
                     <p style={{ fontStyle: 'italic', marginBottom: 20 }}>{producto.description}</p>
