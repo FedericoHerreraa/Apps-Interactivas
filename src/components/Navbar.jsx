@@ -71,33 +71,51 @@ export default function Navbar() {
       >
         <h1 style={{ color: 'white', paddingLeft: 20, paddingTop: 20, fontSize: '20px' }}>L'Atelier Gourmet</h1>
         <List sx={{ padding: 2 }}>
-          <ListItem
-            button
-            onClick={() => handleNavigation('menuSection')}
-            sx={{
-              backgroundColor: '#595959',
-              borderRadius: '8px',
-              border: `1px solid #9e9e9e`,
-              '&:hover': { backgroundColor: '#666' },
-            }}
-            style={{ marginBottom: 15 }}
-          >
-            <ListItemText primary="Menu" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
-          </ListItem>
-          <ListItem
-            button
-            onClick={() => handleNavigation('images')}
-            sx={{
-              backgroundColor: '#595959',
-              marginBottom: 1,
-              borderRadius: '8px',
-              border: `1px solid #9e9e9e`,
-              '&:hover': { backgroundColor: '#666' },
-            }}
-          >
-            <ListItemText primary="Conocenos" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
-          </ListItem>
-        </List>
+  <ListItem
+    button
+    onClick={() => handleNavigation('menuSection')}
+    sx={{
+      backgroundColor: '#cda45e',
+      borderRadius: '10px',
+      border: `1px solid #9e9e9e`,
+      '&:hover': { backgroundColor: '#666' },
+    }}
+    style={{ marginBottom: 15 }}
+  >
+    <ListItemText primary="Menu" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
+  </ListItem>
+  <ListItem
+    button
+    onClick={() => handleNavigation('reseñas')}
+    sx={{
+      backgroundColor: '#cda45e',
+      marginBottom: 1,
+      borderRadius: '10px',
+      border: `1px solid #9e9e9e`,
+      '&:hover': { backgroundColor: '#666' },
+    }}
+  >
+    <ListItemText primary="Reseñas" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
+  </ListItem>
+  <ListItem
+    button
+    onClick={() => handleNavigation('images')}
+    sx={{
+      backgroundColor: '#cda45e',
+      marginBottom: 1,
+      borderRadius: '10px',
+      border: `1px solid #9e9e9e`,
+      '&:hover': { backgroundColor: '#666' },
+    }}
+    style={{ marginBottom: 15 }}
+  >
+    <ListItemText primary="Conocenos" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
+  </ListItem>
+
+  
+  
+</List>
+
       </Drawer>
     </Box>
   );

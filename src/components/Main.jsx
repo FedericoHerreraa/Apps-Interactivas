@@ -5,6 +5,7 @@ import GalleryHoverZoom from './GalleryHoverZoom';
 import Footer from './Footer';
 import heroBg from "../images/hero-bg.jpg";
 import IntroOverlay from './IntroOverlay';
+import Review from './Review';
 import { useState, useEffect } from 'react';
 
 export default function Main() {
@@ -52,6 +53,7 @@ export default function Main() {
             </div>
 
             <MenuSection />
+            <Review/>
             <GalleryHoverZoom />
             <Footer />
 
