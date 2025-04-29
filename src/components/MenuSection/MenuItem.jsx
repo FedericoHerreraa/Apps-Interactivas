@@ -11,7 +11,7 @@ export const MenuItem = ({ section, setSelectedImg }) => {
                 <div key={subIndex} className="menu-subcategory">
                   <h3 >{subcategory.name}</h3>
                   {subcategory.items.map((item, i) => (
-                    <Link to={`/productDetail/${item.id}`} key={i} className="menu-item">
+                    <Link to={`/plato/${item.id}`} key={i} className="menu-item">
                       <div>
                         <div style={{ marginBottom: '10px', textAlign: 'start' }}>
                           <h3>{item.name}</h3>
@@ -34,7 +34,7 @@ export const MenuItem = ({ section, setSelectedImg }) => {
             </div>
           ) : (
             section.items.map((item, i) => (
-              <Link to={`/productDetail/${item.id}`}  key={i} className="menu-item">
+              <Link to={`/plato/${item.id}`}  key={i} className="menu-item">
                 <div>
                   <div style={{ marginBottom: '10px', textAlign: 'start' }}>
                     <h3>{item.name}</h3>

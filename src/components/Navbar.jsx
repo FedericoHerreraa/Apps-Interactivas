@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,7 +11,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 
 export default function Navbar() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const toggleDrawer = (isOpen) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -38,7 +38,7 @@ export default function Navbar() {
             component="div"
             sx={{
               fontFamily: 'inherit',
-              fontSize: { xs: '1.4rem', sm: '2.125rem' } 
+              fontSize: { xs: '1.4rem', sm: '2.125rem' }
             }}
           >
             L'Atelier Gourmet
@@ -59,63 +59,80 @@ export default function Navbar() {
         anchor="right"
         open={open}
         onClose={toggleDrawer(false)}
+
         PaperProps={{
           sx: {
             backgroundColor: 'rgba(0, 0, 0, 0.8)',
             width: 280,
-            transition: 'transform 0.3s ease-in-out',
+            transition: 'transform 0.4s ease, opacity 0.4s ease',
             boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.5)',
             backdropFilter: 'blur(10px)',
+            opacity: open ? 1 : 0.5,
           },
         }}
       >
-        <h1 style={{ color: 'white', paddingLeft: 20, paddingTop: 20, fontSize: '20px' }}>L'Atelier Gourmet</h1>
+        <Typography
+          variant="h6"
+          sx={{
+            color: '#cda45e',
+            fontFamily: 'Playfair Display, Georgia, serif',
+            fontWeight: 'bold',
+            paddingX: 2,
+            paddingTop: 4,
+            textAlign: 'center',
+            fontSize: '1.5rem',
+            borderBottom: '1px solid #cda45e',
+            paddingBottom: 2,
+            marginBottom: 2
+          }}
+        >
+          L'Atelier Gourmet
+        </Typography>
         <List sx={{ padding: 2 }}>
-  <ListItem
-    button
-    onClick={() => handleNavigation('menuSection')}
-    sx={{
-      backgroundColor: '#cda45e',
-      borderRadius: '10px',
-      border: `1px solid #9e9e9e`,
-      '&:hover': { backgroundColor: '#666' },
-    }}
-    style={{ marginBottom: 15 }}
-  >
-    <ListItemText primary="Menu" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
-  </ListItem>
-  <ListItem
-    button
-    onClick={() => handleNavigation('reseñas')}
-    sx={{
-      backgroundColor: '#cda45e',
-      marginBottom: 1,
-      borderRadius: '10px',
-      border: `1px solid #9e9e9e`,
-      '&:hover': { backgroundColor: '#666' },
-    }}
-  >
-    <ListItemText primary="Reseñas" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
-  </ListItem>
-  <ListItem
-    button
-    onClick={() => handleNavigation('images')}
-    sx={{
-      backgroundColor: '#cda45e',
-      marginBottom: 1,
-      borderRadius: '10px',
-      border: `1px solid #9e9e9e`,
-      '&:hover': { backgroundColor: '#666' },
-    }}
-    style={{ marginBottom: 15 }}
-  >
-    <ListItemText primary="Conocenos" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
-  </ListItem>
-
-  
-  
-</List>
-
+          <ListItem
+            button
+            onClick={() => handleNavigation('menuSection')}
+            sx={{
+              backgroundColor: '#1a1a1a',
+              marginBottom: 2,
+              borderLeft: `1px solid #cda45e`,
+              cursor: 'pointer',
+              borderRight: `1px solid #cda45e`,
+              '&:hover': { backgroundColor: '#947948', borderRadius: '5px' },
+            }}
+          >
+            <ListItemText primary="Menu" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
+          </ListItem>
+          <ListItem
+            button
+            onClick={() => handleNavigation('reseñas')}
+            sx={{
+              backgroundColor: '#1a1a1a',
+              marginBottom: 2,
+              borderLeft: `1px solid #cda45e`,
+              cursor: 'pointer',
+              borderRight: `1px solid #cda45e`,
+              '&:hover': { backgroundColor: '#947948', borderRadius: '5px' },
+            }}
+          >
+            <ListItemText primary="Reseñas" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
+          </ListItem>
+          <ListItem
+            button
+            onClick={() => handleNavigation('images')}
+            sx={{
+              backgroundColor: '#1a1a1a',
+              marginBottom: 2,
+              borderLeft: `1px solid #cda45e`,
+              cursor: 'pointer',
+              borderRight: `1px solid #cda45e`,
+              '&:hover': { backgroundColor: '#947948', borderRadius: '5px' },
+            }}
+            style={{ marginBottom: 15 }}
+          >
+            <ListItemText primary="Conocenos" sx={{ color: 'white', fontSize: '1.2rem', textAlign: 'center' }} />
+          </ListItem>
+        </List>
       </Drawer>
     </Box>
   );
