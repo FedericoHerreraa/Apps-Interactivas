@@ -105,7 +105,7 @@ export default function Navbar() {
           </ListItem>
           <ListItem
             button
-            onClick={() => handleNavigation('reseñas')}
+            onClick={() => handleNavigation('reviews')}
             sx={{
               backgroundColor: '#1a1a1a',
               marginBottom: 2,

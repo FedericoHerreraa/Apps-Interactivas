@@ -14,7 +14,7 @@ export default function Review() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box id="reseñas" sx={{ padding: 4, backgroundColor: "#0c0b09" }}>
+    <Box id="reviews" sx={{ padding: 4, backgroundColor: "#0c0b09" }}>
       <Typography
         variant="h4"
         align="center"

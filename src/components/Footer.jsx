@@ -65,6 +65,9 @@ function Footer() {
               <Link href="#menuSection" underline="hover" color="inherit">
                 Menu
               </Link>
+              <Link href="#reviews" underline="hover" color="inherit">
+                Reseñas
+              </Link>
             </Box>
           </Grid>
 
