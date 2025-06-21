@@ -37,12 +37,12 @@ function MenuSection() {
       })
 
       const dataDishes = await response.json()
-      console.log(dataDishes)
       setMenuDataFetched(dataDishes)
+      console.log(menuDataFetched)
     }
 
     fetchData()
-  }, [])
+  }, [menuDataFetched])
 
   return (
     <div id="menuSection" className="menu-container">
