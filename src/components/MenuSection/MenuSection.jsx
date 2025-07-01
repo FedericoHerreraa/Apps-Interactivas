@@ -6,7 +6,7 @@ function MenuSection() {
   const [selectedImg, setSelectedImg] = useState(null);
   const [menuDataFetched, setMenuDataFetched] = useState(null);
 
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+  const API_URL = 'http://localhost:3000';
   const USER_EMAIL = import.meta.env.VITE_USER_EMAIL || 'fede.juan.herrera@gmail.com';
   const USER_PASSWORD = import.meta.env.VITE_USER_PASSWORD || '123456';
 

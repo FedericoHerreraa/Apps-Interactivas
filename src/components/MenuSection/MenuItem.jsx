@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 
 export const MenuItem = ({ item, setSelectedImg }) => {
-  console.log(item)
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
   return (
     <Link to={`/plato/${item.id}`} className="menu-item">
@@ -17,7 +17,7 @@ export const MenuItem = ({ item, setSelectedImg }) => {
         <span className="price">${item.price}</span>
       </div>
       <img
-        src={item.image}
+        src={`${API_URL}/uploads/${item.image}`}
         alt={item.name}
         className="menu-item-img"
         onClick={() => setSelectedImg(item.image)}
