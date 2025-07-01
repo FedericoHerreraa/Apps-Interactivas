@@ -6,7 +6,7 @@ export const MenuItem = ({ item, setSelectedImg }) => {
   const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
   return (
-    <Link to={`/plato/${item.id}`} className="menu-item">
+    <Link to={`/plato/${item._id}`} className="menu-item">
       <div>
         <div style={{ marginBottom: '10px', textAlign: 'start' }}>
           <h3>{item.name}</h3>

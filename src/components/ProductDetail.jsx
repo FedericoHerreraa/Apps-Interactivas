@@ -1,39 +1,20 @@
-
 import { useParams, useNavigate } from 'react-router-dom'
-import { menuData } from '../data/data';
 import { useState, useEffect } from 'react';
 import heroBg from '../images/hero-bg.jpg';
 
 export default function ProductDetail() {
-    const { id } = useParams()
-    const parsedId = Number(id);
+    const { id } = useParams();
     const [producto, setProducto] = useState();
     const navigate = useNavigate();
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
     useEffect(() => {
-        if (!parsedId) return;
-
-        for (const categoria of menuData) {
-            if (categoria.items) {
-                const encontrado = categoria.items.find((item) => item.id === parsedId);
-                if (encontrado) {
-                    console.log(encontrado)
-                    setProducto(encontrado);
-                    return;
-                }
-                    
-            }
-            if (categoria.subcategories) {
-                for (const sub of categoria.subcategories) {
-                    const encontrado = sub.items.find((item) => item.id === parsedId);
-                    if (encontrado) {
-                        console.log(encontrado)
-                        setProducto(encontrado);
-                    }
-                }
-            }
-        }
-    }, [parsedId]);
+        if (!id) return;
+        fetch(`${API_URL}/api/dishes/${id}`)
+            .then(res => res.json())
+            .then(data => setProducto(data))
+            .catch(() => setProducto(null));
+    }, [id, API_URL]);
 
     if (!producto) {
         return <div style={{ color: 'white' }}>Cargando producto...</div>;
@@ -82,7 +63,7 @@ export default function ProductDetail() {
             <div style={{
                 backgroundColor: '#1a1a1a',
                 borderRadius: 20,
-                height: '80vh',
+                height: 'auto',
                 maxWidth: 700,
                 width: '100%',
                 overflow: 'hidden',
@@ -91,19 +72,21 @@ export default function ProductDetail() {
                 display: 'flex',
                 flexDirection: 'column'
             }}>
-                <div style={{ height: '35%' }}>
+                <div style={{ height: 300, overflow: 'hidden' }}>
                     <img
-                        src={producto.img}
+                        src={`${API_URL}/uploads/${producto.image}`}
                         alt={producto.name}
                         style={{
                             width: '100%',
                             height: '100%',
-                            objectFit: 'cover'
+                            objectFit: 'cover',
+                            borderTopLeftRadius: 20,
+                            borderTopRightRadius: 20
                         }}
                     />
                 </div>
 
-                <div style={{ padding: 24, color: 'white', overflowY: 'auto' }}>
+                <div style={{ padding: 24, color: 'white' }}>
                     <h1 style={{ fontSize: 28, marginBottom: 10 }}>{producto.name}</h1>
                     <p style={{ fontStyle: 'italic', marginBottom: 20 }}>{producto.description}</p>
                     <div style={{ marginBottom: 10 }}>
