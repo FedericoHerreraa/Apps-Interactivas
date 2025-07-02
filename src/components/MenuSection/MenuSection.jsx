@@ -6,9 +6,7 @@ function MenuSection() {
   const [selectedImg, setSelectedImg] = useState(null);
   const [menuDataFetched, setMenuDataFetched] = useState(null);
 
-  const API_URL = 'http://localhost:3000';
-  const USER_EMAIL = import.meta.env.VITE_USER_EMAIL || 'fede.juan.herrera@gmail.com';
-  const USER_PASSWORD = import.meta.env.VITE_USER_PASSWORD || '123456';
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
   const handleClickOutside = () => {
     setSelectedImg(null);
@@ -16,30 +14,9 @@ function MenuSection() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const responseLogin = await fetch(`${API_URL}/api/users/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          email: USER_EMAIL,
-          password: USER_PASSWORD
-        })
-      })
-
-      const dataLogin = await responseLogin.json()
-
-      if (!responseLogin.ok) {
-        throw new Error(dataLogin.message || "Error al iniciar sesión")
-      }
-
-      const response = await fetch(`${API_URL}/api/dishes`, {
-        headers: {
-          Authorization: `Bearer ${dataLogin.token}`
-        }
-      })
-
+      const response = await fetch(`${API_URL}/api/dishes`)
       const dataDishes = await response.json()
+
       setMenuDataFetched(dataDishes)
 
       if (!response.ok) {
