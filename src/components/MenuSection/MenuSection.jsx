@@ -6,7 +6,7 @@ function MenuSection() {
   const [selectedImg, setSelectedImg] = useState(null);
   const [menuDataFetched, setMenuDataFetched] = useState(null);
 
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+  const API_URL = import.meta.env.VITE_API_LOCAL_URL;
 
   const handleClickOutside = () => {
     setSelectedImg(null);
@@ -48,15 +48,43 @@ function MenuSection() {
   }
 
   const groupedMenu = groupByCategoryAndSubcategory(menuDataFetched);
+  
+  const categoryOrder = [
+    'entrada',
+    'principal', 
+    'ensalada',
+    'bebida',
+    'bebida_alcoholica',
+    'postre'
+  ];
+
+  const categoryNames = {
+    'entrada': 'Entradas',
+    'principal': 'Platos Principales',
+    'ensalada': 'Ensaladas',
+    'bebida': 'Bebidas',
+    'bebida_alcoholica': 'Bebidas Alcohólicas',
+    'postre': 'Postres'
+  };
+
+  const sortedCategories = Object.entries(groupedMenu).sort(([categoryA], [categoryB]) => {
+    const indexA = categoryOrder.indexOf(categoryA);
+    const indexB = categoryOrder.indexOf(categoryB);
+    
+    if (indexA === -1) return 1;
+    if (indexB === -1) return -1;
+    
+    return indexA - indexB;
+  });
 
   return (
     <div id="menuSection" className="menu-container">
       <h1 style={{ alignItems: 'center' }} >Menú</h1>
       <p>Descubre nuestras deliciosas opciones</p>
 
-      {Object.entries(groupedMenu).map(([category, subcats]) => (
+      {sortedCategories.map(([category, subcats]) => (
         <div key={category}>
-          <h2 style={{ textAlign: 'left', marginTop: '100px' }}>{category.replace("_", " ").toLocaleUpperCase()}</h2>
+          <h2 style={{ textAlign: 'left', marginTop: '100px' }}>{categoryNames[category]}</h2>
           {Object.entries(subcats).map(([subcategory, items]) => (
             <div key={subcategory}>
               {subcategory && (
@@ -67,9 +95,9 @@ function MenuSection() {
                     marginTop: 0,
                     marginBottom: '10px'
                   }}
-                >
-                  {subcategory.replace("_", " ").toLocaleUpperCase()}
-                </h3>
+                                  >
+                    {subcategory.replace("_", " ").charAt(0).toUpperCase() + subcategory.replace("_", " ").slice(1)}
+                  </h3>
               )}
               {items.map(item => (
                 <MenuItem key={item._id} item={item} setSelectedImg={setSelectedImg} />

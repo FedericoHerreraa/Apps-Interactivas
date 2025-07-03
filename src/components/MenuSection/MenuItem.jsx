@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 
 export const MenuItem = ({ item, setSelectedImg }) => {
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+  const API_URL = import.meta.env.VITE_API_LOCAL_URL;
 
   return (
     <Link to={`/plato/${item._id}`} className="menu-item">
