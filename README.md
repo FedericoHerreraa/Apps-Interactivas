@@ -30,7 +30,12 @@ npm run build
 
 ## Variables de entorno
 
-Crea un archivo `.env` en la raíz del proyecto 
+Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
+
+```env
+VITE_API_LOCAL_URL=http://localhost:3000
+VITE_API_PRODUCTION_URL=https://tu-api-en-produccion.com
+```
 
 Ajusta los valores según tu entorno.
 
