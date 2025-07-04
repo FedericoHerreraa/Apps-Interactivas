@@ -34,7 +34,7 @@ Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
 
 ```env
 VITE_API_LOCAL_URL=http://localhost:3000
-VITE_API_PRODUCTION_URL=https://tu-api-en-produccion.com
+VITE_API_DEVELOPMENT_URL=https://back-latelier.onrender.com
 ```
 
 Ajusta los valores según tu entorno.
