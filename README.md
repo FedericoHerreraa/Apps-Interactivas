@@ -62,11 +62,6 @@ Apps-Interactivas/
 
 Podes cambiar las credenciales en el archivo `.env` según
 
-# Licencia
-
-Este proyecto está bajo la licencia MIT.
-
-
 
 
 
