@@ -1,12 +1,86 @@
-# React + Vite
+# L'Atelier - Aplicación Web del Restaurante
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web moderna para mostrar el menú, galería y reseñas del restaurante L'Atelier.
 
-Currently, two official plugins are available:
+## ¿Cómo correr el frontend?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Instala las dependencias:**
+```bash
+npm install
+```
 
-## Expanding the ESLint configuration
+**Configura las variables de entorno** (ver sección abajo).
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Inicia la aplicación:**
+```bash
+npm run dev
+```
+o para producción:
+```bash
+npm run build
+```
+
+
+
+## Dependencias necesarias
+
+- Node.js (v14 o superior recomendado)
+- npm (v6 o superior)  
+- Backend API corriendo
+
+## Variables de entorno
+
+Crea un archivo `.env` en la raíz del proyecto 
+
+Ajusta los valores según tu entorno.
+
+## Estructura del sistema
+
+```
+Apps-Interactivas/
+│
+├── src/
+│   ├── components/      # Componentes React
+│   │   ├── MenuSection/ # Menú del restaurante
+│   │   ├── ProductDetail.jsx
+│   │   ├── GalleryHoverZoom.jsx
+│   │   └── Review.jsx
+│   ├── images/          # Imágenes estáticas
+│   └── App.jsx          # Componente principal
+├── .env                 # Variables de entorno
+├── package.json
+└── README.md
+```
+
+## Funcionalidades principales
+
+- **Menú interactivo** con categorías y vista detallada de platos
+- **Galería de fotos** con efectos hover
+- **Reseñas de clientes** con carousel responsive
+- **Integración con API** para datos dinámicos
+- **Diseño responsive** para móviles y desktop
+
+Podes cambiar las credenciales en el archivo `.env` según
+
+# Licencia
+
+Este proyecto está bajo la licencia MIT.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
