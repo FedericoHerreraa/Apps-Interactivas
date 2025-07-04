@@ -96,7 +96,7 @@ export default function ProductDetail() {
                         <strong>Alérgenos:</strong> {producto.alergenos}
                     </div>
                     <div>
-                        <strong>Precio:</strong> {producto.price}
+                        <strong>Precio:</strong> ${producto.price}
                     </div>
                 </div>
             </div>
